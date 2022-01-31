@@ -1,7 +1,8 @@
 import * as React from "react"
 import { APIContextProvider } from "../hooks/APIContextProvider";
+import Header from '../components/Header';
 import Hero from '../components/Hero';
-
+import "../styles/global/normalize.scss"
 
 
 const renderTitle = () =>{
@@ -14,12 +15,13 @@ const renderTitle = () =>{
 const IndexPage = () => {
   return (
     <APIContextProvider>
-    <main>
-        <Hero />
-        <div>
-          {renderTitle()}
-        </div>
-    </main>
+      <Header />
+      <main>
+          <Hero />
+          <div>
+            {renderTitle()}
+          </div>
+      </main>
     </APIContextProvider>
 
   )

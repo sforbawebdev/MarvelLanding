@@ -10,10 +10,15 @@ export function APIContextProvider({ children }) {
     const id= "1009368";
     api.get(`/v1/public/characters/${id}`)
         .then((response)=>{
-          const data = response.data.results && response.data.results[0] 
+          const data = response.data.results && response.data.results[0]; 
           setCurrentCharacter(data);
-        }).catch(error => console.error(error));;
-
+        }).catch(error => console.error(error));
+    api.get(`/v1/public/comics`, {"characters": `characters=Iron%20Man`, "format": "comic", "formatType": "comic"})
+        .then((response)=>{
+          console.log(response);
+          const data = response.data.results && response.data.results;
+          setComicList(data);
+        }).catch(error => console.error(error));    
   
     // async function makeAPIRequest(){
     //     const base = `https://gateway.marvel.com`, 
@@ -39,7 +44,7 @@ export function APIContextProvider({ children }) {
     // makeAPIRequest();
   }, []);
   return (
-      <APIContext.Provider value={{currentCharacter}}>
+      <APIContext.Provider value={{currentCharacter, comicList}}>
         {children}
       </APIContext.Provider>
     );

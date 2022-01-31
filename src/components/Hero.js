@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useAPI } from "../hooks/APIContextProvider";
+import "../styles/components/Hero.scss"
 
 export default function Hero({}){
     const { currentCharacter} = useAPI();
