@@ -2,7 +2,10 @@ import * as React from "react"
 import { APIContextProvider } from "../hooks/APIContextProvider";
 import Header from '../components/Header';
 import Hero from '../components/Hero';
-import "../styles/global/normalize.scss"
+import MainImage from "../components/MainImage";
+import MultiColumn from "../components/MultiColumn";
+import ComicBanner from '../components/ComicBanner';
+import "../styles/global/normalize.scss";
 
 
 const renderTitle = () =>{
@@ -20,6 +23,12 @@ const IndexPage = () => {
           <Hero />
           <div>
             {renderTitle()}
+            <div>
+            <MainImage />
+            <MultiColumn />
+            </div>
+
+            <ComicBanner />
           </div>
       </main>
     </APIContextProvider>

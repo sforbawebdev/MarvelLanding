@@ -1,11 +1,11 @@
 import * as React from "react";
 import { useAPI } from "../hooks/APIContextProvider";
+import cartoon from '../images/cartoon.png';
 import "../styles/components/Hero.scss"
 
 export default function Hero({}){
     const { currentCharacter} = useAPI();
     const {description} = currentCharacter;
-    console.log(currentCharacter);
     return(
         <div>
             <p>
@@ -15,6 +15,9 @@ export default function Hero({}){
                 <button>
                     Get Started
                 </button>
+            </div>
+            <div>
+                <img src={cartoon} />
             </div>
         </div>
     );

@@ -1,10 +1,27 @@
-import * as React from "react"
-import "../styles/components/Header.scss"
+import * as React from "react";
+import Logo from "./Logo";
+import "../styles/components/Header.scss";
 
-export default function Header({}){
+const renderSignIn = () => {
+    return(
+        <button>
+            Sign In
+        </button>
+    )
+} 
+const renderSignUp = () => {
+    return(
+        <button>
+            Sign Up
+        </button>
+    )
+} 
+export default function Header(){
     return(
         <header>
-            test
+            <Logo />
+            {renderSignIn()}
+            {renderSignUp()}
         </header>
     );
 }
