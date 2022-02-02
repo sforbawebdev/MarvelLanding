@@ -1,3 +1,5 @@
+import * as React from "react";
+
 export const genius = (
     <svg  width="52.129" height="54.12" viewBox="0 0 52.129 54.12">
     <g id="Group" transform="translate(-0.422 -0.44)">

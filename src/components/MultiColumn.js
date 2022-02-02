@@ -1,16 +1,24 @@
+import * as React from "react";
 import {data} from '../column_data';
-import * as React from "react"
+import * as icons from "../utils/Svg";
 import "../styles/components/MultiColumn.scss"
 
+
 const renderColumns = (columns) =>{
-    if(columns && columns.length ===0) return null;
+    if(columns && columns.length === 0) return null;
     
-    console.log(columns);
+
     return columns.map((column)=>{
-        const {icon, title, copy} = column || {};;
+        const {icon, title, copy} = column || {};
+
         return (
             <div>
-                <h2>{title}</h2>
+                <i>
+                    {icons[icon]}
+                </i>
+                <h2>
+                    {title}
+                </h2>
                 <p>
                     {copy}
                 </p>
