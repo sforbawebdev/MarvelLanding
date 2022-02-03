@@ -12,14 +12,14 @@ const renderColumns = (columns) =>{
         const {icon, title, copy} = column || {};
 
         return (
-            <div>
+            <div className="column">
                 <i>
                     {icons[icon]}
                 </i>
-                <h2>
+                <h2 className="column__title">
                     {title}
                 </h2>
-                <p>
+                <p className="column__copy">
                     {copy}
                 </p>
             </div>
@@ -30,7 +30,7 @@ const renderColumns = (columns) =>{
 export default function MultiColumn(){
     const {columns} = data || {};
     return(
-        <div>
+        <div class="multi-column">
             {renderColumns(columns)}
         </div>
     );

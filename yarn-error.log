@@ -1,0 +1,52 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\sgfor\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-waypoint
+
+PATH: 
+  C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Python38\Scripts\;C:\Python38\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Users\sgfor\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\DDEV;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Ruby27-x64\bin;C:\Python27\;C:\Users\sgfor\AppData\Local\Microsoft\WindowsApps;C:\Users\sgfor\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\sgfor\AppData\Roaming\npm;C:\Users\sgfor\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\sgfor\.dotnet\tools;C:\Program Files\heroku\bin;C:\Users\sgfor\AppData\Local\Programs\Azure Data Studio\bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.13.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'C:\Users\sgfor\Desktop\IronmanLanding\marvel-landing-page\node_modules\msgpackr-extract\prebuilds\win32-x64\node.abi93.node'
+
+npm manifest: 
+  {
+    "name": "marvel-landing-page",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Marvel Landing Page",
+    "author": "Scott Forba",
+    "keywords": [
+      "gatsby"
+    ],
+    "scripts": {
+      "develop": "gatsby develop",
+      "start": "gatsby develop",
+      "build": "gatsby build",
+      "serve": "gatsby serve",
+      "clean": "gatsby clean"
+    },
+    "dependencies": {
+      "gatsby": "^4.6.0",
+      "gatsby-plugin-react-helmet": "^5.6.0",
+      "gatsby-plugin-sass": "^5.6.0",
+      "md5": "^2.3.0",
+      "react": "^17.0.1",
+      "react-dom": "^17.0.1",
+      "react-helmet": "^6.1.0",
+      "sass": "^1.49.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

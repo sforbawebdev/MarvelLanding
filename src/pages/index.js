@@ -5,12 +5,12 @@ import Hero from '../components/Hero';
 import MainImage from "../components/MainImage";
 import MultiColumn from "../components/MultiColumn";
 import ComicBanner from '../components/ComicBanner';
-import "../styles/global/normalize.scss";
-
+import "../styles/global/global.scss";
+import "../styles/pages/index.scss";
 
 const renderTitle = () =>{
   return(
-    <h1>
+    <h1 class="title">
       Contrary to popular belief, he knows exactly what he's doing.
     </h1>
   )
@@ -19,13 +19,13 @@ const IndexPage = () => {
   return (
     <APIContextProvider>
       <Header />
-      <main>
+      <main className="index-page">
           <Hero />
-          <div>
+          <div class="main">
             {renderTitle()}
-            <div>
-            <MainImage />
-            <MultiColumn />
+            <div className="main__wrapper">
+              <MainImage />
+              <MultiColumn />
             </div>
 
             <ComicBanner />

@@ -1,0 +1,18 @@
+@import "../global/global";
+
+.index-page {
+    .title {
+        @include _container;
+        font-family: "Ropa Sans";
+        font-weight: normal;
+        font-size: 32px;
+        letter-spacing: 2px;
+        margin-bottom: 28px;
+        text-align: center;
+    }
+    .main__wrapper {
+        @include _container;
+        display: flex;
+        margin-bottom: 116px;
+    }
+}

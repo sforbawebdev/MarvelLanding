@@ -1,6 +1,8 @@
-import * as React from "react"
+import * as React from "react";
 import { useAPI } from "../hooks/APIContextProvider";
-import "../styles/components/ComicBanner.scss"
+import {Carousel} from '../widgets/Carousel';
+import "../styles/components/ComicBanner.scss";
+
 
 const renderList = (list) =>{
     if(list && list.length === 0) return null;
@@ -10,22 +12,23 @@ const renderList = (list) =>{
         if(images.length === 0) return null;
 
         const {path, extension} = thumbnail || {};
-        const image_path = `${path}.${extension}`
+        const image_path = `${path}.${extension}`;
         return(
-            <li key={index}>
-                <a href="#">
-                    <img src={image_path}/>
-                </a>
-            </li>
+            <div key={index} className="comic-banner__item">
+                 <img src={image_path}/>
+            </div>
         )
     })
 }
 export default function ComicBanner({}){
     const { comicList } = useAPI();
-
+    const slides = renderList(comicList);
+    console.log(slides);
     return(
-        <ul>
-            {renderList(comicList)}
-        </ul>
+        <div className="comic-banner">
+            <div className="comic-banner__slider">
+                <Carousel slides={slides}/>
+            </div>
+        </div>
     );
 }

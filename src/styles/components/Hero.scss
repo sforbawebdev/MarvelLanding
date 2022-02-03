@@ -1,0 +1,48 @@
+@import "../global/global";
+
+.hero {
+    background-color: $red;
+    height: 58vw;
+    margin-bottom: 108px;
+    padding-top: 181px;
+    position: relative;
+    overflow: hidden;
+    &:after {
+        content:"";
+        bottom: 0px;
+        left: 0px;
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-bottom: 200px solid white;
+        border-right: 100vw solid transparent;
+    }
+    .hero__wrapper {
+        @include _container;
+        display: flex;
+    }
+    .hero__copy {
+        color: white;
+        font-family: "Nunito";
+        font-size: 24px;
+        padding-bottom: 110px;
+        padding-top: 84px;
+        width: 47vw;
+    }
+    .hero__cta {
+        background-color: $yellow;
+        border: 0px;
+        border-radius: 4px;
+        color: $white;
+        font-family: "Nunito";
+        font-size: 24px;
+        padding: 22px 100px 24px 100px;
+    }
+    .hero__graphic {
+        height: auto;
+        width: 28vw;
+        margin-left: auto;
+        padding-right: 4vw;
+    }
+}

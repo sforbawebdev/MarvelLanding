@@ -1,0 +1,123 @@
+@import "./_variables.scss";
+
+@mixin _minWidthXXSmall {
+    @media (min-width: $xxsmall) {
+        @content;
+    }
+}
+
+@mixin _minWidthXSmall {
+    @media (min-width: $xsmall) {
+        @content;
+    }
+}
+
+@mixin _minWidthSmall {
+    @media (min-width: $small) {
+        @content;
+    }
+}
+
+@mixin _minWidthMobile {
+    @media (min-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin _minWidthTablet {
+    @media (min-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin _minWidthMedium {
+    @media (min-width: $medium) {
+        @content;
+    }
+}
+
+@mixin _minWidthLarge {
+    @media (min-width: $large) {
+        @content;
+    }
+}
+
+@mixin _minWidthXLarge {
+    @media (min-width: $xlarge) {
+        @content;
+    }
+}
+
+@mixin _minWidthXXLarge {
+    @media (min-width: $xxlarge) {
+        @content;
+    }
+}
+
+@mixin _maxWidth($max) {
+    @media (max-width: $max) {
+        @content;
+    }
+}
+
+@mixin _minWidth($min) {
+    @media (min-width: $min) {
+        @content;
+    }
+}
+
+@mixin _maxHeight($max) {
+    @media (max-height: $max) {
+        @content;
+    }
+}
+
+@mixin _betweenWidth($min, $max) {
+    @media (min-width: $min) and (max-width: $max) {
+        @content;
+    }
+}
+
+@mixin _widerMedia {
+    @media (min-width: $siteMaxWidth) {
+        @content;
+    }
+}
+
+@mixin _widerThan($w) {
+    @media (min-width: #{$w}) {
+        @content;
+    }
+}
+
+@mixin _tallerThan($h) {
+    @media (min-height: #{$h}) {
+        @content;
+    }
+}
+@mixin _container {
+    padding-left: 80px;
+    padding-right: 80px;
+    max-width: 88vw;
+    margin-left: auto;
+    margin-right: auto;
+  
+  
+    @content;
+  }
+  @mixin _carousel {
+    height: _toVW(1300);
+  
+    @include _minWidthMobile {
+      height: _toVW(940);
+  
+    }
+  
+    @include _minWidthTablet {
+      height: calc(100vh - 160px);
+    }
+  }
+  @mixin _buttonGradient {
+    background: radial-gradient(center, #3f87a6, #ebf8e1, #f69d3c);
+    @content;
+  }

@@ -1,0 +1,25 @@
+@import "../global/global";
+
+
+.multi-column {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex:1;
+    justify-content: space-between;
+
+    padding-left: 67px;
+    .column {
+        max-width: 21vw;
+        .column__title {
+            font-family: "Ropa Sans";
+            font-size: 20px;
+            font-weight: normal;
+        }
+        .column__copy {
+            color: $grey;
+            font-family: "Nunito";
+            font-size: 16px;
+        }
+    }
+}

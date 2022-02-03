@@ -4,24 +4,27 @@ import "../styles/components/Header.scss";
 
 const renderSignIn = () => {
     return(
-        <button>
+        <button className="cta__signin">
             Sign In
         </button>
     )
 } 
 const renderSignUp = () => {
     return(
-        <button>
+        <button className="cta__signup">
             Sign Up
         </button>
     )
 } 
 export default function Header(){
     return(
-        <header>
-            <Logo />
-            {renderSignIn()}
-            {renderSignUp()}
+        <header className="header">
+            <div className="header__wrapper">
+                <Logo />
+                {renderSignIn()}
+                {renderSignUp()}
+            </div>
+
         </header>
     );
 }

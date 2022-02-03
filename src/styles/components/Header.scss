@@ -1,3 +1,32 @@
+@import "../global/global";
 header {
-    background: green;
+
+    position: absolute;
+    top: 54px;
+    width: 100%;
+    z-index: 1;
+    .header__wrapper {
+        @include _container;
+        display: flex;
+    }
+    .cta__signin {
+        cursor: pointer;
+        background: transparent;
+        border: 0px;
+        color: white;
+        cursor: pointer;
+        font-family: "Nunito";
+        max-height: 40px;
+    }
+    .cta__signup {
+        background: $yellow;
+        border: 0px;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+        font-family: "Nunito";
+        margin-left: 2vw;
+        max-height: 40px;
+        padding: 11px 34px 8px 30px;
+    }
 }
