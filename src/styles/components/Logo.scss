@@ -1,8 +1,13 @@
+@import "../global/global";
+
 .logo {
     display: block;
     margin-right: auto;
     img {
-        width: 29vw;
+        width: 44vw;
         height: auto;
+        @include _minWidthTablet {
+            width: 29vw;
+        }
     }
 }
