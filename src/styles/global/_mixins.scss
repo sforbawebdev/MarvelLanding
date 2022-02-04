@@ -96,28 +96,25 @@
     }
 }
 @mixin _container {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
     max-width: 88vw;
     margin-left: auto;
     margin-right: auto;
-  
-  
     @content;
-  }
-  @mixin _carousel {
-    height: _toVW(1300);
-  
-    @include _minWidthMobile {
-      height: _toVW(940);
-  
-    }
-  
     @include _minWidthTablet {
-      height: calc(100vh - 160px);
+        padding-left: 80px;
+        padding-right: 80px;
+        max-width: 88vw;
     }
   }
-  @mixin _buttonGradient {
+
+
+@mixin _buttonGradient {
     background: radial-gradient(center, #3f87a6, #ebf8e1, #f69d3c);
     @content;
-  }
+}
+//// FUNCTIONS
+@function _toVW($unit) {
+    @return ($unit / 1440) * 100vw;
+}

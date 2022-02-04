@@ -10,7 +10,7 @@ import "../styles/pages/index.scss";
 
 const renderTitle = () =>{
   return(
-    <h1 class="title">
+    <h1 className="title">
       Contrary to popular belief, he knows exactly what he's doing.
     </h1>
   )
@@ -21,7 +21,7 @@ const IndexPage = () => {
       <Header />
       <main className="index-page">
           <Hero />
-          <div class="main">
+          <div className="main">
             {renderTitle()}
             <div className="main__wrapper">
               <MainImage />

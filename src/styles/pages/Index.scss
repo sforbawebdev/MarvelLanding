@@ -5,14 +5,24 @@
         @include _container;
         font-family: "Ropa Sans";
         font-weight: normal;
-        font-size: 32px;
+        font-size: 24px;
         letter-spacing: 2px;
-        margin-bottom: 28px;
+        margin-bottom: _toVW(50);
+        padding: 0vw 20vw;
         text-align: center;
+        @include _minWidthTablet {
+            font-size: 32px;
+            margin-bottom: _toVW(35);
+            padding: 0px;
+        }
     }
     .main__wrapper {
         @include _container;
         display: flex;
-        margin-bottom: 116px;
+        margin-bottom: _toVW(116);
+        flex-direction: column;
+        @include _minWidthTablet {
+            flex-direction: row;
+        }
     }
 }

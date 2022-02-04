@@ -1,16 +1,20 @@
+import * as icons from "../utils/Svg";
 import * as React from "react";
 import "../styles/components/MultiColumn.scss";
 
-export default function MultiColumnCard({}){
+export default function MultiColumnCard({column}){
+    const {icon, title, copy} = column || {};
     return(
-        <article>
-            <h2>
-                Title
+        <div className={`column ${icon}`}>
+            <i>
+                {icons[icon]}
+            </i>
+            <h2 className="column__title">
+                {title}
             </h2>
-            <p>
-            He is an excellent engineer and mechanic capable of fixing almost any, if not all machinery.
+            <p className="column__copy">
+                {copy}
             </p>
-
-        </article>
+        </div>
     );
 }

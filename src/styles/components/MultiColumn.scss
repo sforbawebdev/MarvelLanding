@@ -3,14 +3,46 @@
 
 .multi-column {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     flex:1;
     justify-content: space-between;
-
-    padding-left: 67px;
+    padding-left: 0;
+    @include _minWidthTablet {
+        flex-direction: row;
+        padding-left: _toVW(67);
+    }
     .column {
-        max-width: 21vw;
+        margin-bottom: 21px;
+        width: 100%;
+        &.genius {
+            order: 1;
+            @include _minWidthTablet {
+                order: revert;
+            }   
+        }
+        &.engineer {
+            order: 3;
+            @include _minWidthTablet {
+                order: revert;
+            }
+        }
+        &.business {
+            order: 4;
+            @include _minWidthTablet {
+                order: revert;
+            }
+        }
+        &.tactician {
+            order: 2;
+            @include _minWidthTablet {
+                order: revert;
+            }
+        }
+        @include _minWidthTablet {
+            max-width: 21vw;
+            margin-bottom: 0px;
+        }
         .column__title {
             font-family: "Ropa Sans";
             font-size: 20px;

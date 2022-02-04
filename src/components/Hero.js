@@ -7,18 +7,18 @@ export default function Hero(){
     const { currentCharacter} = useAPI();
     const {description} = currentCharacter;
     return(
-        <div class="hero">
+        <div className="hero">
             <div className="hero__wrapper">
 
                 <div>
-                    <p class="hero__copy">
+                    <p className="hero__copy">
                         {description}
                     </p>
-                    <button class="cta hero__cta">
+                    <button className="cta hero__cta">
                         Get Started
                     </button>
                 </div>
-                <img src={cartoon}   class="hero__graphic"/>
+                <img src={cartoon}  alt="Iron Man Cartoon" className="hero__graphic"/>
             </div>
 
         </div>

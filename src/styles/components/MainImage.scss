@@ -1,6 +1,12 @@
 @import "../global/global";
 
 .main-image {
-    width: 36vw;
-    height: 36vw;
+    margin-bottom: 21px;
+    width: 100%;
+    height: auto;
+    @include _minWidthTablet {
+        width: 36vw;
+        height: 36vw;
+        margin-bottom: 0px;
+    }
 }

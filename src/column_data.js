@@ -6,14 +6,14 @@ export const data  = {
             "copy": "Stark is extremely well-respected in the business world, able to command people's attentions when he speaks on economic matters.  He has built up several multi-million dollar companies from virtually nothing."
         },
         {
-            "icon": "business",
-            "title": "Master Businessman",
-            "copy": "Stark is extremely well-respected in the business world, able to command people's attentions when he speaks on economic matters.  He has built up several multi-million dollar companies from virtually nothing."
-        },
-        {
             "icon": "engineer",
             "title": "Master Engineer",
             "copy": "He is an excellent engineer and mechanic capable of fixing almost any, if not all machinery."
+        },
+        {
+            "icon": "business",
+            "title": "Master Businessman",
+            "copy": "Stark is extremely well-respected in the business world, able to command people's attentions when he speaks on economic matters.  He has built up several multi-million dollar companies from virtually nothing."
         },
         {
             "icon": "tactician",

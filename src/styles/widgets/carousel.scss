@@ -49,7 +49,6 @@
   &:before {
     left: 20px;
     right: auto;
-    background-image: url("/prev.svg");
     background-repeat: no-repeat;
     background-size: 28px 25px;
   }
@@ -62,7 +61,7 @@
   &:before {
     right: 20px;
     left: auto;
-    background-image: url("/next.svg");
+
     background-repeat: no-repeat;
     background-size: 28px 25px;
   }
